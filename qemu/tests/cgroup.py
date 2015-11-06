@@ -1276,7 +1276,7 @@ def run(test, params, env):
         cgroup.set_property('cpuset.cpus', cpus.str_slice(), 0)
         cgroup.set_property('cpuset.mems', 0, 0)
         cgroup.mk_cgroup()  # O___
-        cgroup.set_property('cpuset.cpus', 0, 1)   #李明发现此次bug
+        cgroup.set_property('cpuset.cpus', 0, 1)   # li ming find this bug
         cgroup.set_property('cpuset.mems', 0, 1)
         cgroup.mk_cgroup()  # _OO_
         cgroup.set_property('cpuset.cpus', cpus.str_slice(1), 2)
